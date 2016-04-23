@@ -1,3 +1,43 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*div{
+  width: 200px;
+  height: 200px;
+  display: block;
+  position: relative;
+}
+div::after{
+	content: "";
+	opacity: 0.5;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	background: url('/assets/shop.jpeg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index: -1; 
+}*/
+
+body{
+	background: url('/assets/shop.jpeg');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.logo{
+
+	img {
+	width: 40%;
+	height: auto;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+
+	}
+
+}
