@@ -1,5 +1,6 @@
 class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index]
 
   # GET /ideas
   # GET /ideas.json
@@ -10,6 +11,7 @@ class IdeasController < ApplicationController
   # GET /ideas/1
   # GET /ideas/1.json
   def show
+    @idea = Idea.find_by(id: params[:id])
   end
 
   # GET /ideas/new
@@ -28,7 +30,7 @@ class IdeasController < ApplicationController
 
     respond_to do |format|
       if @idea.save
-        format.html { redirect_to @idea, notice: 'Idea was successfully created.' }
+        format.html { redirect_to @idea, notice: 'Your business idea was successfully created.' }
         format.json { render :show, status: :created, location: @idea }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class IdeasController < ApplicationController
   def update
     respond_to do |format|
       if @idea.update(idea_params)
-        format.html { redirect_to @idea, notice: 'Idea was successfully updated.' }
+        format.html { redirect_to @idea, notice: 'Your business idea was successfully updated.' }
         format.json { render :show, status: :ok, location: @idea }
       else
         format.html { render :edit }
@@ -56,7 +58,7 @@ class IdeasController < ApplicationController
   def destroy
     @idea.destroy
     respond_to do |format|
-      format.html { redirect_to ideas_url, notice: 'Idea was successfully destroyed.' }
+      format.html { redirect_to ideas_url, notice: 'successfully destroyed' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +71,6 @@ class IdeasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def idea_params
-      params.require(:idea).permit(:name, :description, :picture)
+      params.require(:idea).permit(:name, :description, :picture, :slogan, :vote_count)
     end
 end
