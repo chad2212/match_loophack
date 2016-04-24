@@ -12,37 +12,42 @@
 	background-size: 100%;
 	background-size:cover;
 	opacity: 0.4;
+  z-index: -1;
   	 }
 </style>
 <div class="image_div"></div>
 <p id="notice"><%= notice %></p>
 
+<% if user_signed_in? %>
+  <% if current_user == @idea.user %>
+    <p class="right">
+    <%= link_to 'Edit', edit_idea_path(@idea) %>
+    </p>
+  <% end %>
+<% end %>
 
 
+<div class = "presentation">
+  <h2>
+    <%= @idea.name %>
+  </h2>
+  <h5> 
+    <%= @idea.slogan %>
+  </h5>
+  
 
-<p class= "black">
-  <strong>Name:</strong>
-  <%= @idea.name %>
-</p>
-
-<p class= "black"> <strong>Vote Count:</strong>
-  <%=@idea.vote_count %>
+  <p>
+    <%= @idea.description %>
   </p>
 
-<p class= "black">
-  <strong>Description:</strong>
-  <%= @idea.description %>
-</p>
-
-<p class= "black"> 
-  <strong>Slogan:</strong>
-  <%= @idea.slogan %>
-</p>
-
+  
+  <h1> 
+    <%=@idea.vote_count %><span> votes</span>
+    </h1>
+</div>
 <!--p>
   <strong>Picture:</strong>
   <%#= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
 </p-->
 
-<%= link_to 'Edit', edit_idea_path(@idea) %>
 <%#= link_to 'Back', ideas_path %>
