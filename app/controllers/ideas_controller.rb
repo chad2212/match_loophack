@@ -5,7 +5,11 @@ class IdeasController < ApplicationController
   # GET /ideas
   # GET /ideas.json
   def index
-    @ideas = Idea.all
+    @ideas = Idea.all.where(sponsored:false)
+  end
+
+  def index_sponsored
+    @ideas = Idea.all.where(sponsored:true)
   end
 
   # GET /ideas/1
@@ -71,6 +75,6 @@ class IdeasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def idea_params
-      params.require(:idea).permit(:name, :description, :picture, :slogan, :vote_count)
+      params.require(:idea).permit(:name, :description, :picture, :slogan, :vote_count, :user_id)
     end
 end

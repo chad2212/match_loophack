@@ -1,9 +1,33 @@
+
+<style media="screen">
+  .image_div { 
+  	background-image: url(<%= @idea.picture %>);
+  	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	background-size:cover;
+	opacity: 0.4;
+  	 }
+</style>
+<div class="image_div"></div>
 <p id="notice"><%= notice %></p>
+
+
+
 
 <p>
   <strong>Name:</strong>
   <%= @idea.name %>
 </p>
+
+<p><strong>Vote Count:</strong>
+  <%=@idea.vote_count %>
+  </p>
 
 <p>
   <strong>Description:</strong>
@@ -11,9 +35,14 @@
 </p>
 
 <p>
-  <strong>Picture:</strong>
-  <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
+  <strong>Slogan:</strong>
+  <%= @idea.slogan %>
 </p>
 
-<%= link_to 'Edit', edit_idea_path(@idea) %> |
-<%= link_to 'Back', ideas_path %>
+<!--p>
+  <strong>Picture:</strong>
+  <%#= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
+</p-->
+
+<%= link_to 'Edit', edit_idea_path(@idea) %>
+<%#= link_to 'Back', ideas_path %>

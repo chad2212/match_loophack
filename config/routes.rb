@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'static_pages#homepage'
   get '/about' => 'static_pages#about_us', as: 'about'
+  get '/ideas/sponsored' => 'ideas#index_sponsored', as: 'ideas_sponsored'
   resources :static_pages
   resources :ideas
   devise_for :users
