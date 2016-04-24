@@ -16,7 +16,7 @@ In order to run the site for you
 Thank you and hope you enjoy the website.
 
 <b>Team Matcha</b>
-
+===   
 Shungheon Chad Chai
 Alan Soetikno
 Victoria Chen
