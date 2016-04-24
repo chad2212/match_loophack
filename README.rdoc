@@ -4,14 +4,14 @@
 For{loop} is a non-profit incubator with the purpose of bridging the economic divide across the Delmar Boulevard by encouraging investment in businesses led by underprivileged entrepreneurs. We accomplish this through our pop-up shop program, where we provide vacant lots on Delmar to entrepreneurs in the hopes that they gain experience and confidence in the development of their own business skills.
 
 
-In order to run the site for you
+In order to run the site for you need to be concerned with
 
 * Ruby version 2.2.1
 * Rails 4.2.5
-* Uses PostgreSQL so need to create a user and password and put them into the *database.yml*
-* Besure to run <tt>bundle install</tt> <tt>rake db:setup</tt> and <tt>rake db:migrate</tt>
-* run 'rails s' to start up the server
-* open up a browser (tested on chrome and safari) and go to 'localhost:3000'
+* PostgreSQL : need to create a user and password and put them into the *database.yml*
+* Run <tt>bundle install</tt> <tt>rake db:setup</tt> and <tt>rake db:migrate</tt>
+* Run <tt>rails s</tt> to start up the server
+* open up a browser (tested on chrome and safari) and go to <em>localhost:3000</em>
 
 Thank you and hope you enjoy the website.
 
