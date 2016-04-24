@@ -1,34 +1,39 @@
-<div class="section group">
-  <div class="col span_1_of_3">
-  This is column 1
-  </div>
-  <div class="col span_1_of_3">
-  This is column 2
-  </div>
-  <div class="col span_1_of_3">
-  This is column 3
-  </div>
+
+
+
 </div>
+<br><br>
+<% @count = 0 %>
+<% @condition = false %>
+<% @ideas.each do |idea| %>
+  
+    <% if @count % 3 == 0 && @condition %>
+        </div>
+    <% end %>
 
 
-<!--table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Picture</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <% if @count % 3 == 0 %>
+      <% @condition = true %>
+      <div class="section group">
+    <% end %>
 
-  <tbody>
-    <%# @ideas.each do |idea| %>
-      <tr>
-        <td><%#= idea.name %></td>
-        <td><%#= idea.picture %></td>
-      </tr>
-    <%# end %>
-  </tbody>
-</table-->
 
-<br>
+
+
+  <div class="col span_1_of_3 black">
+    <!-- This is where the actual ideas stuff goes -->
+    <h3><%= idea.name %></h3><br>
+      <div class="square-box">
+        <%= link_to idea_path(idea) do %>
+          <img src=<%= idea.picture %>>
+        <% end %>
+      </div>
+  </div>
+
+
+ 
+
+
+    <% @count=@count+1 %>
+<% end %>
+</div>

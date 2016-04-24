@@ -32,7 +32,7 @@ th { border-bottom: 1px solid #DDD; }
 	background-size:cover;
 }
 
-#faded-background{
+.faded-background{
 	position: fixed;
     top: 0;
     left: 0;
