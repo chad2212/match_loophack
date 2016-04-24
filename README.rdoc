@@ -1,28 +1,21 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+== for{loop}
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+For{loop} is a non-profit incubator with the purpose of bridging the economic divide across the Delmar Boulevard by encouraging investment in businesses led by underprivileged entrepreneurs. We accomplish this through our pop-up shop program, where we provide vacant lots on Delmar to entrepreneurs in the hopes that they gain experience and confidence in the development of their own business skills.
+
+
+In order to run the site for you
+
+* Ruby version 2.2.1
+* Rails 4.2.5
+* Uses PostgreSQL so need to create a user and password and put them into the 'database.yml'
+* Besure to run 'bundle install' 'rake db:setup' and 'rake db:migrate'
+* run 'rails s' to start up the server
+* open up a browser (tested on chrome and safari) and go to 'localhost:3000'
+
+Thank you and hope you enjoy the website.
+
+Shungheon Chad Chai
+Alan Soetikno
+Victoria Chen
+Kristen Koyanagi

@@ -1,0 +1,12 @@
+Sat, 23 Apr 2016 21:07:46 -0500
+README.rdoc	Sat, 23 Apr 2016 21:07:29 -0500
+app/controllers/application_controller.rb	Sat, 23 Apr 2016 16:29:32 -0500
+app/controllers/ideas_controller.rb	Sat, 23 Apr 2016 20:19:11 -0500
+app/controllers/static_pages_controller.rb	Sat, 23 Apr 2016 10:13:34 -0500
+app/helpers/application_helper.rb	Sat, 23 Apr 2016 08:29:19 -0500
+app/helpers/ideas_helper.rb	Sat, 23 Apr 2016 09:41:50 -0500
+app/helpers/static_pages_helper.rb	Sat, 23 Apr 2016 09:47:35 -0500
+app/models/idea.rb	Sat, 23 Apr 2016 09:45:35 -0500
+app/models/static_page.rb	Sat, 23 Apr 2016 09:47:35 -0500
+app/models/user.rb	Sat, 23 Apr 2016 11:27:39 -0500
+app/uploaders/picture_uploader.rb	Sat, 23 Apr 2016 15:35:09 -0500
