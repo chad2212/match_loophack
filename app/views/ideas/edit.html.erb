@@ -1,3 +1,20 @@
+<style media="screen">
+  .image_div { 
+  	background-image: url(<%= @idea.picture %>);
+  	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	background-size:cover;
+	opacity: 0.4;
+  z-index: -1;
+  	 }
+</style>
+<div class="image_div"></div>
 <h1>Editing Idea</h1>
 
 <%= render 'form' %>

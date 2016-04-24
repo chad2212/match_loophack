@@ -42,7 +42,16 @@
 
   
   <h1> 
-    <%=@idea.vote_count %><span> votes</span>
+    <%=@idea.vote_count %>
+    <% if user_signed_in? %>
+        <span>
+          <%#= link_to "#", method: :post do %>
+            <img src="/assets/heart.png">
+          <%# end %>
+        </span>
+        <% else %>
+            <span>Sign in to Vote</span>
+      <% end %>
     </h1>
 </div>
 <!--p>

@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :index_sponsored, :show]
 
   # GET /ideas
   # GET /ideas.json
@@ -10,6 +10,10 @@ class IdeasController < ApplicationController
 
   def index_sponsored
     @ideas = Idea.all.where(sponsored:true)
+  end
+
+  def add_vote
+    @new_vote = Idea.find_by(id: params[:id])
   end
 
   # GET /ideas/1

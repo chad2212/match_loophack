@@ -29,7 +29,7 @@
       <%= f.file_field :picture %>
     </div>
     <div>
-      <%= f.hidden_field :user_id, value: current_user %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
     </div>
     <div class="actions">
       <%= f.submit %>
